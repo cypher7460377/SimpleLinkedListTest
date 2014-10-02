@@ -21,8 +21,9 @@ public class Link<T> extends Linkable {
 	/**
 	 * @param data the data to set
 	 */
-	public void setData(T data) {
+	public boolean setData(T data) {
 		this.data = data;
+		return true;
 	}
 
 }

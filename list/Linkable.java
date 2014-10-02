@@ -33,8 +33,8 @@ package list;
         prev = link;
     }
 
-    public final boolean isMemberOf(SimpleLinkedList<? extends Linkable> list) {
-        return this.owner == list;
+    public final boolean isMemberOf(SimpleLinkedList<? extends Linkable> simpleLinkedList) {
+        return this.owner == simpleLinkedList;
     }
 
     final void setOwner(SimpleLinkedList<? extends Linkable> list) {
