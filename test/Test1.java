@@ -1,7 +1,12 @@
+package test;
+
+import  list.*;
 import org.junit.Before;
 import org.junit.Test;
 
 import junit.framework.TestCase;
+import list.Link;
+import list.SimpleLinkedList;
 
 
 public class Test1 extends TestCase {
@@ -9,9 +14,8 @@ public class Test1 extends TestCase {
 	private Link<Integer> middle = new Link<Integer>(new Integer(2));
 	private Link<Integer> tail = new Link<Integer>(new Integer(3));
 	
+	@SuppressWarnings("rawtypes")
 	private SimpleLinkedList<Link> testLLOne = new SimpleLinkedList<Link>();
-	private SimpleLinkedList<Link> testLLTwo = new SimpleLinkedList<Link>();
-	
 	/*
 	 * Add some links to the end of a linked list. 
 	 * Get the last one, and check it against the object you

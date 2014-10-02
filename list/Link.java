@@ -1,3 +1,4 @@
+package list;
 
 public class Link<T> extends Linkable {
 	private T data;

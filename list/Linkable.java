@@ -1,3 +1,4 @@
+package list;
 /**
  * Objects that need to be managed through the SimpleLinkedList must extend this
  * class.
