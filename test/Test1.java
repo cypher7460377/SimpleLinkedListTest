@@ -25,17 +25,16 @@ public class Test1 extends TestCase {
 	 * method to return true.
 	 */
 	
-	/*@Test
-	public void testIsMemberOfMock() {
+	@Test
+	public void testGetOwnerMock() {
 		Link<Integer> link = Mockito.mock(Link.class);
 		testLLOne.addFirst(link);
-		//Mockito.stub(link.isMemberOf((SimpleLinkedList<? extends Linkable>) Mockito.anyList())).toReturn(true);
-		//((Mockito) link).when(link.isMemberOf(testLLOne)).thenReturn(true);
-		@SuppressWarnings("unused")
-		boolean what = link.isMemberOf(testLLOne);
+		Mockito.stub(link.getOwner()).toReturn(testLLOne);
+		@SuppressWarnings({ "unused", "unchecked" })
+		SimpleLinkedList<Link> testList = (SimpleLinkedList<Link>) link.getOwner();
 		assertTrue(link.isMemberOf(testLLOne));
 	}
-*/
+
 	
 	/*
 	 * Stub methods from the Link class. 
@@ -54,17 +53,19 @@ public class Test1 extends TestCase {
 	
 	/*
 	 * Stub methods from the Link class. 
-	 * Now we will stub the setData
-	 * method and then we will use verify
-	 * to check if the method was called.
+	 * Now we will stub the deleteData
+	 * method and then we will stub to
+	 * have it return an Integer.
 	 */
-	/*@Test
-	public void testSetDataMock() {
+	@Test
+	public void testDeleteDataMock() {
 		Link<Integer> link = Mockito.mock(Link.class);
-		Mockito.stub(link.setData(Integer.valueOf(1)).toReturn(true);
+		Mockito.stub(link.deleteData()).toReturn(1);
 
-		Mockito.verify(link, times(1)).setData();
-	}*/
+		int check = link.deleteData();
+		
+		assertEquals(1, check);
+	}
 	
 	/*
 	 * Add some links to the end of a linked list. 

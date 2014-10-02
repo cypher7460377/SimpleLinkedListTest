@@ -21,9 +21,25 @@ public class Link<T> extends Linkable {
 	/**
 	 * @param data the data to set
 	 */
-	public boolean setData(T data) {
+	public int setData(T data) {
 		this.data = data;
-		return true;
+		return 0;
+	}
+	
+	/**
+	 * 
+	 * @return the list 
+	 */
+	public Object getOwner() {
+		return this.owner;
+	}
+	
+	/**
+	 * Return null for right now. We'll use it for testing stubs.
+	 * @return null
+	 */
+	public T deleteData() {
+		return null;
 	}
 
 }
